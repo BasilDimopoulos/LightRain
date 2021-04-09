@@ -30,4 +30,9 @@ searchInp.addEventListener('keydown', async (e)=>{
 
 let updateCurrentWeather = (data) =>{
     city.textContent = data.name + ',' + data.sys.country;
+    day.textContent = dayOfWeek();
 }
+
+let dayOfWeek = () => {
+    return new Date().toLocaleDateString('en-EN', {'weekday': 'long'});
+} 
